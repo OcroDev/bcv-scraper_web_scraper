@@ -28,7 +28,8 @@ export default async function bcvScraping() {
 
     const exchange = await getPageData()
     await browser.close()
-    // aqui se retorna el objeto con los datos de las tasas de cambio del BCV
+
+    // Here is the object containing the data for the exchange rates from the BCV.
     return exchange
 
   }catch (err) {
@@ -36,8 +37,7 @@ export default async function bcvScraping() {
   }
 }
 
-//funcion que recupera los datos
-
+// Function that retrieves the data.
 bcvScraping()
   .then(exchange => console.log(exchange))
   .catch(err => console.log(err))
